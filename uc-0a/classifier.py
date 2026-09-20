@@ -5,6 +5,7 @@ Starter file. Build this using the RICE → agents.md → skills.md → CRAFT wo
 import csv
 import argparse
 import os
+import re
 
 # Allowed schema values for the category field
 ALLOWED_CATEGORIES = [
@@ -55,8 +56,8 @@ def classify_complaint(description):
     else:
         category = "Other"
 
-    # Reason must cite specific words
-    reason = f"Complaint mentions '{description.strip()}'"
+    evidence = re.sub(r"[.!?]+", ",", " ".join(description.split())).strip(" ,")
+    reason = f"Complaint mentions '{evidence}'."
 
     # Flag ambiguous cases
     flag = ""

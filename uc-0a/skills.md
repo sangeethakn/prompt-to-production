@@ -1,7 +1,4 @@
 # skills.md
-# INSTRUCTIONS:Generate a draft by prompting AI, then manually refine this file.
-# Delete these comments before committing.
-
 skills:
 
 name: classify_complaint
@@ -41,9 +38,9 @@ output: |
 Type: CSV file
 Format: "uc-0a/results_[city].csv" with columns [category, priority, reason, flag]
 error_handling: |
-If input file is missing, malformed, or rows are invalid:
-
-Skip invalid rows and log NEEDS_REVIEW in flag.
+If input file is missing or malformed, stop with a clear error. For rows with
+an empty description, emit Other with NEEDS_REVIEW rather than silently
+classifying the row.
 
 Enforce schema rules across all rows to prevent taxonomy drift.
 
