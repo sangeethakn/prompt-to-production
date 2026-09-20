@@ -6,7 +6,7 @@ import csv
 import argparse
 import os
 
-# Allowed schema values
+# Allowed schema values for the category field
 ALLOWED_CATEGORIES = [
     "Pothole", "Flooding", "Streetlight", "Waste", "Noise",
     "Road Damage", "Heritage Damage", "Heat Hazard", "Drain Blockage", "Other"
@@ -104,3 +104,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

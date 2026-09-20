@@ -1,5 +1,5 @@
 # agents.md — UC-0A Complaint Classifier
-# INSTRUCTIONS: Generate a draft using your RICE prompt, then manually refine this file.
+# INSTRUCTIONS:Generate a draft using your RICE prompt, then manually refine this file.
 # Delete these comments before committing.
 
 role: |
@@ -47,3 +47,5 @@ No severity blindness: complaints with severity keywords must never be classifie
 No missing justification: every row must include a reason field.
 
 Failure modes to avoid: Taxonomy drift, Severity blindness, Missing justification, Hallucinated sub-categories, False confidence on ambiguity.
+
+
